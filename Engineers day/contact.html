@@ -1,0 +1,276 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./Footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body{
+           background-color:  rgb(3, 3, 36);
+        }
+        .contactusra {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            margin-top: 100px;
+            padding: 0;
+            background-color: rgb(3, 3, 36);
+            color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contact-container {
+            width: 100%;
+            max-width: 900px; /* Increase for desktop */
+            margin: 20px;
+            position: relative;
+            padding-bottom: 50px; /* To prevent content from being too tight at the bottom */
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            position: absolute;
+            top: -50px;
+            left: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        .info-card {
+            background-color: rgb(65, 89, 98);
+            padding: 15px 0px;
+            border-radius: 5px;
+            border: #fff;
+            width: calc(25% - 7.5px);
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-card i {
+            font-size: 24px;
+            color: #68D1FF;
+            margin-bottom: 5px;
+        }
+
+        .info-card h3 {
+            margin: 5px 0;
+            font-size: 12px;
+            color: #ffffff;
+        }
+
+        .info-card p {
+            margin: 0;
+            font-size: 10px;
+            color: #ffffff;
+        }
+
+        .contact-form {
+            background-color: rgba(91, 122, 148, 0.364);
+            padding: 30px;
+            border-radius: 5px;
+            padding-top: 70px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-form h2 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .contact-form button {
+            background-color: #8d9dbb61;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            align-self: flex-start;
+        }
+
+        .contact-form button:hover {
+            background-color: #becbe2;
+        }
+
+        /* Media Query for responsiveness */
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .info-card {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .contact-form {
+                padding-top: 20px; /* Adjust padding */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .container {
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-card h3 {
+                font-size: 10px;
+            }
+
+            .info-card p {
+                font-size: 8px;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 14px;
+            }
+
+            .contact-form button {
+                font-size: 14px;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="./Navbar/Navbar.css">
+<script src="./Navbar/Navbar.js"></script>
+</head>
+<body>
+<nav class="navbar">
+<div class="mobile-navbar">
+  <button class="navbar-toggle" id="navbarToggle">
+    ☰
+  </button>
+</div>
+<ul class="navbar-items open" id="navbarItems" style="
+bottom: 0px;
+margin-left: 0px;
+">
+  <li><a href="./index.html">HOME</a></li>
+  <li><a href="./index.html#about-section">About</a></li>
+  <li><a href="./index.html#eventsid">EVENTS</a></li>
+  <li><a href="./index.html#timeline">TIME LINE</a></li>
+  <li><a href="./index.html#partners">OUR PARTNERS</a></li>
+  <li><a href="../Gallery/Gallery.html">GALLERY</a></li>
+  <li><a href="./contact.html">CONTACT US</a></li>
+</ul>
+</nav>
+    <section class="contactusra" id="contact">
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>K-Hub Workspace</h3>
+                <p>B-Block, Kiet Group of Institutions</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>PHONE NUMBER</h3>
+                <p>8367670706</p>
+                <p>9502969689</p>
+            </div>
+            <div class="info-card">
+                <a href="https://www.instagram.com/khub_kiet/">
+                <i class="fab fa-instagram"></i>
+            </a>
+                <h3>INSTAGRAM</h3>
+                <p>khub_kiet</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>EMAIL</h3>
+                <p>kub.helpdesk@gmail.com</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="mailto:kub.helpdesk@gmail.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Enter your Name" required>
+                <input type="email" name="email" placeholder="Enter a valid email address" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+        
+
+    </div>
+</section>
+<div class="main-footer">
+    <div class="footer-container">
+      <div class="footer-subcontainer1">
+        <div>
+          <img src="./logo.png" alt="logo" class="header-logo">
+          <!-- <img src="projecticons.png" alt="logo" class="header-logo"> -->
+
+        </div>
+        <div>
+          <ul class="contact-items">
+            <li><a href="https://www.instagram.com/khub_kiet/"><img src="./assets/Instragram2.jpg"
+                  class="instagram"></a></li>
+            <li><a href="https://www.linkedin.com/company/khub-kiet/"><img src="./assets/LinkedIn2 icon.jpg"
+                  class="linkedin"></a></li>
+            <li><a href="https://www.youtube.com/@Kiet-Hub"><img src="./assets/Youtube2 icon.jpg" class="youtube">
+              </a></li>
+            <li><a href="https://www.youtube.com/@Kiet-Hub"><img src="./assets/Whatsapp2 logo.jpg" class="Whatsapp">
+              </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-subcontainer2">
+        <ul class="footer-items" id="footerItems">
+          <li><a href="./index.html">HOME</a></li>
+      <li><a href="./index.html#about-section">About</a></li>
+      <li><a href="./index.html#eventsid">EVENTS</a></li>
+      <li><a href="./index.html#timeline">TIME LINE</a></li>
+      <li><a href="./index.html#partners">OUR PARTNERS</a></li>
+      <li><a href="../Gallery/Gallery.html">GALLERY</a></li>
+      <li><a href="./contact.html">CONTACT US</a></li>
+
+        </ul>
+
+      </div>
+      <div class="footer-subcontainer3"></div>
+      <div class="footer-body">
+        <h3>Address</h3>
+        <div class="address-footer">
+          <img src="./assets/Location icon.jpg">
+          <p class="footer-matter3">KIET College, Yanam Road, Korangi, Andhra Pradesh-533461</p>
+        </div>
+        <h3>Contact Us</h3>
+        <div class="contact-footer">
+          <img src="./assets/phone  icon.jpg">
+          <p>987654321</p>
+        </div>
+        <div class="contact-footer">
+          <img src="./assets/Message icon.jpg">
+          <p>khub.helpdesk@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

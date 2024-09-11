@@ -1,0 +1,265 @@
+/* General Settings */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff; /* Light blue background */
+}
+/* Center the Carousel Control Buttons Vertically */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%; /* Position the buttons in the center of the carousel */
+  transform: translateY(-50%); /* Ensure the buttons are vertically centered */
+  background: rgba(255, 255, 255, 0.2); /* Light glassmorphism background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%; /* Make the buttons circular */
+  width: 50px;
+  height: 50px;
+}
+.org-overview-heading elementor-container .partner-card h2{
+
+}
+
+/* Add hover effect for carousel buttons */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.35); /* Increase opacity on hover */
+}
+.partner container {
+  min-height: 100vh;
+  background: white;
+  padding: 2rem;
+}
+.partnersbro {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+}
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.partner-card {
+  background: rgba(200, 200, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  border: 1px solid rgba(100, 100, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.partner-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(200, 200, 255, 0.3);
+}
+.partner-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(100, 100, 255, 0.3);
+}
+.partner-name {
+  color: #dedede;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.partner-card:nth-child(1) { animation-delay: 0.1s; }
+.partner-card:nth-child(2) { animation-delay: 0.2s; }
+.partner-card:nth-child(3) { animation-delay: 0.3s; }
+.partner-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Ensure the control icons are visible and in white */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* Makes the icons white */
+  width: 30px; /* Adjust icon size */
+  height: 30px;
+}
+
+/* Increase clickable area */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Adjust control buttons for smaller screens */
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+/* Carousel Image Caption Styling (Glassmorphism) */
+.carousel-caption {
+  background: rgba(255, 255, 255, 0.15); /* Transparent white background */
+  backdrop-filter: blur(10px); /* Apply blur for frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border to define edges */
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 45%; /* Limit width of the caption */
+  color: #fff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for floating effect */
+  text-align: left;
+}
+/* Center the Carousel Control Buttons Vertically */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%; /* Position at the center of the carousel */
+  transform: translateY(-50%); /* Adjust for perfect centering */
+  background: rgba(255, 255, 255, 0.15); /* Transparent white background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* Ensure the Icons Inside the Buttons are Visible */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* White icons */
+}
+
+/* Hover Effect for Control Buttons */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.25); /* More opacity on hover */
+}
+
+/* Increase the clickable area for easier navigation */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 60px; /* Slightly larger clickable area */
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Title Styling */
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Enhanced text shadow for readability */
+}
+
+/* Description Styling */
+.carousel-caption p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Text shadow to improve visibility */
+}
+
+/* Carousel Image Styling */
+.carousel-item img {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Left and Right Caption Placement */
+.carousel-caption-left {
+  left: 5%;
+  right: auto;
+  bottom: 20%;
+}
+
+.carousel-caption-right {
+  right: 5%;
+  left: auto;
+  bottom: 20%;
+}
+
+/* Control Button Styling (Glassmorphism) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background: rgba(255, 255, 255, 0.15); /* Transparent white background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.25); /* More opacity on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 100vh; /* Full height for tablet view */
+  }
+
+  .carousel-caption {
+    max-width: 60%;
+    padding: 15px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 100vh; /* Full height for mobile view */
+  }
+
+  .carousel-caption {
+    max-width: 80%;
+    padding: 10px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}

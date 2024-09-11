@@ -1,0 +1,184 @@
+
+<style>
+    
+.card-container {
+    width: 100%;
+    /* max-width: 900px; */
+    padding: 20px;
+    background-color: #fff;
+    background-color: rgb(3, 3, 36);
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.card {
+    width: 40%;
+    height: 250px;
+    /* background-color: #e0e0e0; */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-day {
+    font-weight: bold;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    background-color: #6fb3b8;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+}
+
+.card-content img {
+    width: 150px;
+    height: 150px;
+    margin-right: 15px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-image {
+    width: 60px;
+    height: 60px;
+    background-color: #567890;
+    margin-right: 15px;
+    border-radius: 4px;
+}
+
+.card-details {
+    flex-grow: 1;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-description {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.know-more {
+    padding: 5px 10px;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.know-more:hover {
+    background-color: #2e4378;
+}
+/* Existing styles... */
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+    }
+
+    .card-content img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card-day {
+        font-size: 24px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-description {
+        font-size: 12px;
+    }
+
+    .know-more {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-content img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-day {
+        font-size: 20px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-description {
+        font-size: 12px;
+    }
+
+    .know-more {
+        font-size: 12px;
+    }
+}
+
+
+</style></head>
+<body>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-day">DAY 1</div>
+            <div class="card-content">
+                <img src="C:\Users\UMA SEERSHIKA\New folder\INAUGURATION.jpeg" alt="IPL Record">
+                <div class="card-details">
+                    <h3 class="card-title">INAUGURATION</h3>
+                    <p class="card-description">Celebrate Engineering excellence and innovative projects during the inauguration ceremony.</p>
+                    <a href="gallery.html" class="know-more">Know More</a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-day">DAY 2</div>
+            <div class="card-content">
+                <img src="C:\Users\UMA SEERSHIKA\New folder\image.png" alt="IPL Record">
+                <div class="card-details">
+                    <h3 class="card-title">MAIN EVENT</h3>
+                    <p class="card-description">Award distribution, guests speeches, gifts distribution. And Culturals etc.</p>
+                    <a href="gallery.html" class="know-more">Know More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
