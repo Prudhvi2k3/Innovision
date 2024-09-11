@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovision Countdown</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .countdown-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            text-align: center;
+        }
+
+        h1 {
+            color: #4cc9f0;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .time-segment {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .time-label {
+            font-size: 1rem;
+            color: #4cc9f0;
+            margin-top: 10px;
+        }
+
+        .time-value {
+            font-size: 3rem;
+            font-weight: bold;
+            background: #4cc9f0;
+            color: #1a1a2e;
+            padding: 10px;
+            border-radius: 10px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .time-value:hover {
+            transform: scale(1.05);
+        }
+
+        .scroll-numbers {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .scroll-numbers span {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-container">
+        <h1>Innovision Starts In</h1>
+        <div class="countdown">
+            <div class="time-segment">
+                <div class="time-value">
+                    <div class="scroll-numbers" id="days"></div>
+                </div>
+                <span class="time-label">Days</span>
+            </div>
+            <div class="time-segment">
+                <div class="time-value">
+                    <div class="scroll-numbers" id="hours"></div>
+                </div>
+                <span class="time-label">Hours</span>
+            </div>
+            <div class="time-segment">
+                <div class="time-value">
+                    <div class="scroll-numbers" id="minutes"></div>
+                </div>
+                <span class="time-label">Minutes</span>
+            </div>
+            <div class="time-segment">
+                <div class="time-value">
+                    <div class="scroll-numbers" id="seconds"></div>
+                </div>
+                <span class="time-label">Seconds</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const eventDate = new Date('2024-09-14T00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            updateScrollNumbers('days', days, 100);
+            updateScrollNumbers('hours', hours, 24);
+            updateScrollNumbers('minutes', minutes, 60);
+            updateScrollNumbers('seconds', seconds, 60);
+
+            // Add pulse animation to the changing unit
+            addPulseAnimation(seconds, 'seconds');
+            addPulseAnimation(minutes, 'minutes');
+            addPulseAnimation(hours, 'hours');
+            addPulseAnimation(days, 'days');
+
+            if (timeLeft < 0) {
+                clearInterval(countdown);
+                document.querySelector(".countdown-container").innerHTML = "<h1>The Event Has Started!</h1>";
+            }
+        }
+
+        function updateScrollNumbers(id, value, max) {
+            const element = document.getElementById(id);
+            let html = '';
+            for (let i = 0; i < max; i++) {
+                html += `<span>${i.toString().padStart(2, '0')}</span>`;
+            }
+            element.innerHTML = html;
+            element.style.transform = `translateY(${-value * 100 / max}%)`;
+        }
+
+        function addPulseAnimation(value, id) {
+            const element = document.querySelector(`#${id}`).parentElement;
+            if (value !== parseInt(element.getAttribute('data-last-value'))) {
+                element.classList.add('pulse');
+                setTimeout(() => element.classList.remove('pulse'), 1000);
+                element.setAttribute('data-last-value', value);
+            }
+        }
+
+        const countdown = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>

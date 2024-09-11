@@ -1,0 +1,202 @@
+/* About.css */
+
+/* Common styles */
+#about-section {
+    background-image: url('https://kiethub.com/static/media/Kaleido.f3f03a883935dc98fbba.jpeg');
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-attachment: fixed; /* Set the background image as fixed */
+    color: #fff;
+    text-align: center;
+    padding-top: 350px; /* Adjust the top padding for accurate positioning */
+    position: relative;
+    border-radius: 12px;
+}
+
+.about-overlay {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    color: black;
+}
+
+.about-details{
+    max-width:1200px;
+    margin: 10px 50px;
+}
+
+.Abouttextimage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:12;
+}
+.org-overview-heading {
+    border-left: 3px solid #3498db;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+/* section2 */
+#org-overview {
+    text-align: center;
+    padding: 50px 20px; /* Adjust padding as needed */
+  }
+  
+  .org-overview {
+    display: inline-block;
+    text-align: left;
+    max-width: 1200px; /* Adjust max-width as needed */
+  }
+  
+  .org-overview-heading {
+    border-left: 3px solid #3498db; /* Change the color as needed */
+    padding-left: 10px; /* Adjust padding as needed */
+    margin-bottom: 10px; /* Adjust margin as needed */
+    width: fit-content;
+  }
+  
+  .org-overview-heading h1 {
+    font-size: 1.8em; /* Adjust font size as needed */
+    margin-bottom: 0;
+    box-shadow: inset 0 0 0 0 #3498db;
+    -webkit-transition: all ease 1.8s;
+  -moz-transition: all ease 1.8s;
+  transition: all ease 1.0s;
+  }
+  .org-overview-heading h1:hover {
+    /* background-color: #3498db; */
+      color: #ffffff;
+      width: 315px;
+      box-shadow: inset 315px 0 0 0 #3498db;
+    }
+  
+  .org-overview-matter p {
+    font-size: 1.1em; /* Adjust font size as needed */
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+/* Column container styles */
+.elementor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+/* Column styles */
+.elementor-column {
+    flex: 1;
+    margin: 0 20px; /* Add spacing between columns */
+    text-align: left;
+}
+
+.Imageinside {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    min-width: none;
+}
+
+/* Heading styles */
+.ekit-heading--title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Description styles */
+.ekit-heading__description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Text styles */
+.elementor-widget-text-editor span {
+    color: var(--e-global-color-text);
+    font-size: 1.1rem;
+}
+
+/* Image styles */
+.elementor-widget-image img {
+    width: 100%; /* Make images responsive */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 900px) {
+    /* Adjustments for tablet screens */
+    #about-section {
+        padding-top: 350px; /* Adjusted top padding for tablets */
+    }
+    .elementor-container {
+        flex-direction: column; /* Stack columns vertically on mobile screens */
+        align-items: center; /* Center columns vertically */
+    }
+    .Abouttextimage{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:12;
+    }
+    .elementor-column {
+        margin: 12px; /* Remove margin between columns on mobile screens */
+    }
+
+    /* Adjust font sizes for mobile screens */
+    .ekit-heading--title {
+        font-size: 2rem;
+    }
+
+    .ekit-heading__description p {
+        font-size: 1rem;
+    }
+
+    .elementor-widget-text-editor span {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for mobile screens */
+
+    .about-details{
+        max-width:1200px;
+        margin: 0;
+    }
+
+    #about-section {
+        padding-top: 450px; /* Adjusted top padding for mobile devices */
+    }
+
+    .elementor-container {
+        flex-direction: column; /* Stack columns vertically on mobile screens */
+        align-items: center; /* Center columns vertically */
+    }
+
+    .elementor-column {
+        margin: 0; /* Remove margin between columns on mobile screens */
+    }
+
+    /* Adjust font sizes for mobile screens */
+    .ekit-heading--title {
+        font-size: 2rem;
+    }
+
+    .ekit-heading__description p {
+        font-size: 1rem;
+    }
+
+    .elementor-widget-text-editor span {
+        font-size: 1rem;
+    }
+}
