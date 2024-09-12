@@ -166,11 +166,15 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
-    /* Adjustments for mobile screens */
+
+@media screen and (max-width: 769px){
     .org-overview-matter {
     font-size: 0.7em;
     }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjustments for mobile screens */
 
     .about-details{
         max-width:1200px;
